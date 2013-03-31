@@ -27,7 +27,7 @@ import net.minecraftforge.common.MinecraftForge;
 public class EternalDaySun {
     
     public static final String version = "1.0b";
-    public final static Block blockEternalDaySun = new BlockEternalDaySun(194, 17, Material.iron).setHardness(0.5F).setStepSound(Block.soundMetalFootstep)
+    public final static Block blockEternalDaySun = new BlockEternalDaySun(194, Material.iron).setHardness(0.5F).setStepSound(Block.soundMetalFootstep)
         .setBlockName("eternalDaySun").setCreativeTab(CreativeTabs.tabRedstone);;
 
     @Mod.Instance ("EternalDaySun")

@@ -16,9 +16,9 @@ import net.minecraft.world.World;
 
 public class BlockEternalDaySun extends BlockContainer {
     
-    public BlockEternalDaySun(int pId, int pTexture, Material pMaterial)
+    public BlockEternalDaySun(int pId, Material pMaterial)
     {
-        super(pId, pTexture, pMaterial);
+        super(pId, pMaterial);
     }
     
     @Override
@@ -31,6 +31,26 @@ public class BlockEternalDaySun extends BlockContainer {
     public int tickRate()
     {
         return 1;
+    }
+    
+    public int getBlockTextureFromSide(int pSide)
+    {
+       switch(pSide)
+       {
+           case 0:
+               return 0;
+           case 1:
+               return 1;
+           case 2:
+               return 2;
+           case 3:
+               return 3;
+           case 4:
+               return 4;
+           case 5:
+               return 5;
+       }
+       return 18;
     }
     
     @Override
