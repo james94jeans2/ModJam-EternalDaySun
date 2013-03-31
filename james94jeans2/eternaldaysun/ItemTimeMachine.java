@@ -17,7 +17,7 @@ public class ItemTimeMachine extends Item{
         maxStackSize = 1;
         setCreativeTab(CreativeTabs.tabRedstone);
         setItemName("timeMachine");
-        setIconIndex(7);
+        setIconIndex(6);
     }
     
     public String getTextureFile() {

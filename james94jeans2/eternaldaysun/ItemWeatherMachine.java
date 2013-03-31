@@ -16,7 +16,7 @@ public class ItemWeatherMachine extends Item{
         maxStackSize = 1;
         setCreativeTab(CreativeTabs.tabRedstone);
         setItemName("weatherMachine");
-        setIconIndex(9);
+        setIconIndex(8);
     }
     
     public String getTextureFile() {

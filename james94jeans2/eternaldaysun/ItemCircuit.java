@@ -16,7 +16,7 @@ public class ItemCircuit extends Item{
         maxStackSize = 16;
         setCreativeTab(CreativeTabs.tabRedstone);
         setItemName("circuit");
-        setIconIndex(8);
+        setIconIndex(7);
     }
     
     public String getTextureFile() {
