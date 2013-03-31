@@ -7,6 +7,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 
 /**
  *
@@ -21,6 +27,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 public class EternalDaySun {
     
     public static final String version = "1.0b";
+    public final static Block blockEternalDaySun = new BlockEternalDaySun(194, 17, Material.iron).setHardness(0.5F).setStepSound(Block.soundMetalFootstep)
+        .setBlockName("eternalDaySun").setCreativeTab(CreativeTabs.tabRedstone);;
 
     @Mod.Instance ("EternalDaySun")
     public static EternalDaySun instance;
@@ -37,6 +45,10 @@ public class EternalDaySun {
     @Mod.Init
     public void load (FMLInitializationEvent event)
     {
+        LanguageRegistry.addName(blockEternalDaySun, "Eternal Day and Sun Block");
+        MinecraftForge.setBlockHarvestLevel(blockEternalDaySun, "pickaxe", 3);
+        GameRegistry.registerBlock(blockEternalDaySun, "eternalDaySun");
+        GameRegistry.registerTileEntity(TileEntityBlockEternalDaySun.class, "eternalDaySun");
         proxy.setup();   
     }
     
