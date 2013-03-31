@@ -21,6 +21,11 @@ public class BlockEternalDaySun extends BlockContainer {
         super(pId, pMaterial);
     }
     
+    public int idDropped(int par1, Random par2Random, int par3)
+    {
+        return this.blockID;
+    }
+    
     @Override
         public String getTextureFile()
     {
@@ -37,9 +42,9 @@ public class BlockEternalDaySun extends BlockContainer {
     {
        switch(pSide)
        {
-           case 0:
+           case 0: //down
                return 0;
-           case 1:
+           case 1: //up
                return 1;
            case 2:
                return 2;
